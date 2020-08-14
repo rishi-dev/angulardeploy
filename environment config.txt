@@ -1,0 +1,21 @@
+serve configuration : 
+https://stackoverflow.com/questions/57722619/an-unhandled-exception-occurred-configuration-es5-is-not-set-in-the-workspace
+
+https://itnext.io/multi-environment-setup-for-your-angular-app-a211d72f1ff1
+
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "routests:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "routests:build:production"
+            },
+            "staging": {
+              "browserTarget": "routests:build:staging"
+            }            
+          }
+        },
+
+ng serve -c=staging 

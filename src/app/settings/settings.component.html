@@ -1,0 +1,11 @@
+<p>Settings View</p>
+<br/><label>NgFor Links</label><br/>
+<div *ngFor="let approute of approutesset">
+    <a [routerLink]="approute.appRoute"
+    routerLinkActive="active-link myactive-link" 
+    [routerLinkActiveOptions]="{exact: true}"
+    [queryParams]="{first:1000,second:'secondparam'}"
+    >{{approute.routepath}}</a><br/>
+</div>
+<hr/>
+<router-outlet></router-outlet>
